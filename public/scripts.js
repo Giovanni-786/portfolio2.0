@@ -12,17 +12,13 @@ const modal = document.querySelector(".modal");
 for(let card of cards){
     card.addEventListener('click', function(){
         const videoId = card.getAttribute("id");
-        modalOverlay.classList.add('active');
-        modalOverlay.querySelector("iframe").src = `https://www.youtube.com/embed/${videoId}`;
+        window.location.href = `/video?id=${videoId}`
         
         
     })
 }
 
 
-closeModal.addEventListener('click', function(){
-    modalOverlay.classList.remove('active');
-})
     
 
 
@@ -54,7 +50,4 @@ closeModal.addEventListener('click', function(){
 })
 
 
-maximizeModal.addEventListener('click', function(){
-    modal.classList.toggle('maximize');
-})
 

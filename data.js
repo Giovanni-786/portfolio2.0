@@ -3,7 +3,8 @@ module.exports = [
         id: "lA8o3kUl1TA",
         title: "Segredos das refs no React",
         duration: "57 min",
-        price: "Free"
+        price: "Free",
+        featured: true
 
     },
 
@@ -11,7 +12,8 @@ module.exports = [
         id: "DsbeclaivTo",
         title: "Como Aprender CSS",
         duration: "21 min",
-        price: "Free"
+        price: "Free",
+        
 
     },
 
@@ -28,7 +30,8 @@ module.exports = [
         id: "iLEbGQXsg3k",
         title: "Recriando a interface do GitHub",
         duration: "2h 41 min",
-        price: "Free"
+        price: "Free",
+        featured: true
 
     },
 
@@ -36,7 +39,8 @@ module.exports = [
         id: "SGwHpzgqzgk",
         title: "Criando o Carousel do zero só com CSS",
         duration: "25 min",
-        price: "Free"
+        price: "Free",
+        featured: true
 
     },
 
