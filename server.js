@@ -69,9 +69,13 @@ server.get("/courses", function(req, res){
 
     }
     
+    
+
+
     return res.render("courses", {courses:courses})
 
 })
+
 
 
 server.get("/video", function(req,res){
@@ -91,6 +95,30 @@ server.get("/video", function(req,res){
     return res.render("video", {item: video })
 
 })
+
+
+
+
+server.get("/courses/:id", function(req, res) {
+    const id = req.params.id;
+  
+
+      //utilizando o método find para encontrar o id de cada vídeo e colocar na variável
+      const course = courses.find(function(course){
+        //retorna um boolean    
+            return course.id == id   
+        })
+    
+        if(!course){
+            return res.render('not-found')
+        }
+    
+        return res.render("courses", {courses:courses})
+
+  });
+
+
+
 
 
 server.use(function(req, res) {

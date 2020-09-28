@@ -37,17 +37,12 @@ const modalCourse = document.querySelector('.course-modal-overlay');
 
 for(let card of cardsCourse){
     card.addEventListener('click', function(){
-        modalCourse.classList.add('active-course');
+        const videoId = card.getAttribute("id");
+        window.location.href = `/video?id=${videoId}`
+        
     })
 }
 
-
-
-closeModal.addEventListener('click', function(){
-    modalCourse.classList.remove('active-course');
-    modalCourse.querySelector("iframe").src = `https://www.rocketseat.com.br`;
-    
-})
 
 
 
