@@ -37,8 +37,8 @@ const modalCourse = document.querySelector('.course-modal-overlay');
 
 for(let card of cardsCourse){
     card.addEventListener('click', function(){
-        const videoId = card.getAttribute("id");
-        window.location.href = `/video?id=${videoId}`
+        const courseId = card.getAttribute("id");
+        window.location.href = `/courses/${courseId}`
         
     })
 }

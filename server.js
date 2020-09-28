@@ -4,6 +4,7 @@ const nunjucks = require('nunjucks');
 const server = express();
 
 const videos = require("./data")
+const courses = require("./dataCourses")
 
 server.use(express.static('public'))
 
@@ -40,39 +41,9 @@ server.get("/portfolio", function(req, res){
 })
 
 
-server.get("/courses", function(req, res){
-    const courses = {
-        card_course: [
-
-            {id_course:"starter",  
-            card_url: "https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg",
-            description_custom:"Torne-se um programador desejado", 
-            description_default: "no mercado com esses cursos gratuitos", 
-            price_course:"Free",
-            class_custom: "customize-starter"},
-            
-            {id_course:"launchbase",
-            card_url: "https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg",
-            description_custom:"Domine programação do zero",
-            description_default: "e tenha acesso às melhores oportunidades do mercado",
-            price_course:"Paid",
-            class_custom: "customize-launchbase"},
-            
-            {id_course: "gostack",
-            card_url: "https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg",
-            description_custom:"Treinamento imersivo",
-            description_default:"nas tecnologias mais modernas de desenvolvimento web e mobile",
-            price_course: "Paid",
-            class_custom: "customize-gostack"}
-            
-        ]
-
-    }
+server.get("/course", function(req, res){
     
-    
-
-
-    return res.render("courses", {courses:courses})
+    return res.render("course", {items:courses})
 
 })
 
@@ -102,22 +73,29 @@ server.get("/video", function(req,res){
 server.get("/courses/:id", function(req, res) {
     const id = req.params.id;
   
+    const course = courses.find(function(course){
+        return course.id == id
+        
+    })
 
-      //utilizando o método find para encontrar o id de cada vídeo e colocar na variável
-      const course = courses.find(function(course){
-        //retorna um boolean    
-            return course.id == id   
-        })
-    
-        if(!course){
-            return res.render('not-found')
-        }
-    
-        return res.render("courses", {courses:courses})
+    if(!course){
+        return res.send('ID NÃO ENCONTRADO')
+    }
 
+    
+    return res.render(`${id}`, {items:courses})
+     
   });
 
 
+
+
+
+/* === COURSES === */
+
+server.get("/starter", function(req, res){
+    return res.render("starter")
+})
 
 
 

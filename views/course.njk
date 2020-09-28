@@ -16,9 +16,9 @@
 
             <div class="cards-curses">
             
-            {%for course in courses.card_course%}
-                
-                <div class="card-course" id="{{course.id_course}}">
+            {%for course in items%}
+    
+                <div class="card-course" id="{{course.id}}">
                     <div class="card-content">
                         <img src="{{course.card_url}}" alt="card-course">
                         <p><strong id="{{course.class_custom}}">{{course.description_custom}}</strong> {{course.description_default}}</p>
