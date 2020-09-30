@@ -16,7 +16,7 @@
 
 
 body{
-    background: #282a36;
+    background: rgb(18, 18, 20);
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -24,7 +24,21 @@ body{
 header {
     padding: 32px;
     border-bottom: 1px solid #333;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgb(32, 32, 36);
+    position: relative;
+    
+}
+
+header img {
+    width: 180px;
+    height: 75px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    top: 8px;
+    display: flex;
+    align-items: center;
+
 }
 
 .links{
@@ -110,7 +124,7 @@ header {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap:  15px;
+    gap:  5px;
 }
 
 .card {
@@ -196,6 +210,34 @@ iframe {
 
 /* === CARDS CURSOS === */
 
+.wrapper-course{
+    text-align: center;
+    position: relative;
+}
+
+.wrapper-course img {
+    width: 30%;
+    height: auto;
+    margin-top: 40px;
+
+}
+
+.wrapper-course h1 {
+    margin-top: 20px;
+}
+
+.wrapper-course p {
+    font-size: 15px;
+    margin: 20px;
+}
+
+.back-page-course img{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+}
+
+
 
 .cards-curses {
     display: grid;
@@ -207,12 +249,13 @@ iframe {
     cursor: pointer;
 }
 .card-course{
-    width: 26vw;
+    width: 28vw;
     height: 90vh;
     margin: 20% auto;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color:rgb(32, 32, 36);
     border-radius: 8px;
     position: relative;
+    padding: 10px;
     
 }
 
@@ -231,7 +274,7 @@ iframe {
 }
 
 .card-content p {
-    font-size: 15px;
+    font-size: 17px;
     margin-top: 10%;
 }
 
@@ -260,7 +303,7 @@ iframe {
 }
 
 .card-course:hover {
-    transition: color 400ms;
+    transition: color 800ms;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -372,3 +415,5 @@ iframe {
     left: 50px;
 
 }
+
+

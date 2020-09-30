@@ -11,7 +11,7 @@
 
 {% block content %}
         <div id="wrapper">
-            <h1>Aulas Favoritadas</h1>
+            <h1>Aulas</h1>
         </div>
         <div class="purple-heart">
             <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="heart">    
@@ -26,7 +26,7 @@
                 <div class="card__image-container {{ 'featured-wrapper' if item.featured }}">
                     <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
                     {% if item.featured %}
-                        <div class="featured">featured</div>
+                        <div class="featured">favorite</div>
                     {% endif %}
                 </div>
     

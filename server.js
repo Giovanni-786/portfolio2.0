@@ -79,7 +79,7 @@ server.get("/courses/:id", function(req, res) {
     })
 
     if(!course){
-        return res.send('ID NÃO ENCONTRADO')
+        return res.render('not-found')
     }
 
     
@@ -96,6 +96,18 @@ server.get("/courses/:id", function(req, res) {
 server.get("/starter", function(req, res){
     return res.render("starter")
 })
+
+server.get("/launchbase", function(req, res){
+    return res.render("launchbase")
+})
+
+
+server.get("/gostack", function(req, res){
+    return res.render("gostack")
+})
+
+
+
 
 
 
